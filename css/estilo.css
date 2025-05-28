@@ -1,0 +1,100 @@
+body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding-top: 70px;
+      padding-bottom: 60px; /* espacio para footer fijo */
+    }
+
+    /* Navbar estilizado */
+    .navbar {
+      background: #fff;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1030;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #2c3e50;
+      letter-spacing: 1.5px;
+    }
+
+    /* Menú */
+    .nav-link {
+      color: #2c3e50;
+      font-weight: 600;
+      margin: 0 12px;
+      position: relative;
+      padding: 0.5rem 0;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    /* Línea animada al pasar mouse */
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #007bff;
+      transition: width 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Iconos a la izquierda */
+    .nav-link i {
+      font-size: 1.1rem;
+      transition: transform 0.3s ease;
+    }
+    .nav-link:hover i {
+      transform: translateX(3px);
+      color: #007bff;
+    }
+
+    /* Responsive: menú hamburguesa */
+    .navbar-toggler {
+      border: none;
+      font-size: 1.4rem;
+      color: #007bff;
+    }
+
+    /* Cuando el menú está desplegado en móvil */
+    .navbar-collapse {
+      background: #fff;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      border-radius: 8px;
+      margin-top: 8px;
+      padding: 1rem 1.5rem;
+    }
+    .navbar-nav {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    @media(min-width: 992px) {
+      .navbar-nav {
+        flex-direction: row;
+      }
+      .navbar-collapse {
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
