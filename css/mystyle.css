@@ -1,0 +1,83 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      p {
+        color: red;
+        color: rgb(238, 142, 142);
+        color: rgba(red, green, blue, alpha);
+        background-color: blue;
+      }
+
+      .p1 {
+        color: red;
+        background-color: rgb(206, 240, 198);
+      }
+
+      .claseh1 {
+        color: rgb(22, 236, 147);
+        background-color: rgb(226, 15, 233);
+      }
+
+      .claseh2 {
+        color: rgb(213, 235, 136);
+        background-color: rgb(151, 197, 240);
+      }
+
+      .caja {
+        height: 100vh;
+        background-color: seagreen;
+        background-image: url(../img/Csharp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .interno {
+        width: 50%;
+        height: 20%;
+        border-radius: 10px;
+        background-color: rgb(77, 101, 146);
+        box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .redondeadoP{
+        border-radius: 0 10px 0 0;
+        height: 50px;
+        text-align: center;
+        background-color: rgb(35, 156, 236);
+        color: black;
+      }
+
+      .redondeadoh1{
+        border-radius: 0 10px 0 0;
+        height: 50px;
+        text-align: center;
+        background-color: rgb(238, 6, 6);
+      }
+
+      .cuadro {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation: mover 5s infinite alternate;
+    }
+
+    @keyframes mover {
+        0%   { left: 0px; }
+        100% { left: 50%; }
+    }
+
+    @keyframes parpadeo {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+
+    .luz {
+      background-color: yellow;
+      width: 100px;
+      height: 100px;
+      
+      animation: parpadeo 1s ease-in-out infinite alternate;
+    }
