@@ -1,0 +1,189 @@
+/* ESTRUCTURA PARA FOOTER FIJO Y CUERPO FLEXIBLE */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+main {
+  flex: 1;
+  margin-bottom: 80px; /* espacio para el footer fijo */
+}
+
+/* === NAVBAR (40% más angosta) === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a3d62;
+  padding: 0.3rem 0.3rem; /* reducido (antes 2rem) */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* reducido (antes 1.5rem) */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* === SECCIONES === */
+
+.hero {
+  text-align: center;
+  padding: 2rem 2rem;
+  background: linear-gradient(to right, #74b9ff, #0984e3);
+  color: white;
+}
+
+.nosotros {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.productos {
+  padding: 3rem 2rem;
+  background-color: #fefefe;
+  text-align: center;
+}
+
+.producto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.producto {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 280px;
+  transition: transform 0.3s;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.testimonios {
+  padding: 3rem 2rem;
+  background-color: #dff9fb;
+  text-align: center;
+}
+
+.testimonio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.testimonio {
+  width: 300px;
+  padding: 1rem;
+  background: white;
+  border-left: 5px solid #0984e3;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.contacto {
+  padding: 2rem;
+  text-align: center;
+  background-color: #eaf2f8;
+}
+
+/* === FOOTER FIJO === */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a3d62;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  z-index: 999;
+}
+
+/* === ANIMACIONES === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .producto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .producto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #0a3d62;
+    padding: 1rem 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .testimonio-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
